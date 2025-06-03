@@ -1,0 +1,163 @@
+//Root for dark
+:root {
+  --dark-color1: #171717;
+  --dark-color2: #222020;
+  --dark-color3: #2b242b;
+}
+
+.bg-dark-1{
+	background-color: var(--dark-color1) !important;
+}
+.bg-dark-2{
+	background-color: var(--dark-color2) !important;
+}
+.bg-dark-3{
+	background-color: var(--dark-color3) !important;
+}
+//dark color1
+body,
+.page-wrapper,
+.sticky-header,
+.header-style-two .header-lower .logo-box:before
+{
+  background-color: var(--dark-color1);
+}
+
+.testimonial-block-four .inner-box .info-box .icon
+{
+	color: var(--dark-color1);
+}
+a{
+	color: inherit;
+}
+//dark color 2
+.header-style-one .header-lower .logo-box:before,
+.header-style-one .main-box .btn-box:before,
+.header-style-four .header-top,
+.header-style-three .sticky-header.fixed-header
+{
+  background-color: var(--dark-color2);
+}
+.pricing-block-five .inner-box .content-column .inner-column .pricing-amount
+{
+	border-color: var(--dark-color3);
+}
+//dark color 3
+.btn-style-one,
+.offer-banner .outer-box
+{
+  background-color: var(--dark-color3);
+}
+.about-section .content-column .info-box
+{
+	border-bottom: 1px solid var(--dark-color2);
+}
+.pricing-block-five .inner-box .content-column .inner-column
+{
+	border-color: var(--dark-color3);
+}
+// black color
+.btn-style-three,
+.work-tabs .tab-buttons .tab-btn
+{
+  background-color: #000;
+}
+
+//border dark color 1
+//border dark color 2
+//border color
+.service-block-two .inner-box .hover-content .icon,
+.about-section-two .content-column .float-text{
+  color: #3a3a3a,
+}
+.blockquote-one {
+	color: #8d8d8d;
+}
+
+//text color
+.sticky-header .mobile-nav-toggler,
+.main-header .info-btn small,
+.main-menu .navigation > li > a,
+.header-style-two .main-menu .navigation > li > a,
+.header-style-two .sticky-header .main-menu .navigation > li > a,
+.header-style-three .sticky-header.fixed-header .main-menu .navigation > li > a,
+.header-style-two .sticky-header .mobile-nav-toggler,
+.list-style-one li,
+.main-header .ui-btn,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+.title a,
+.sec-title h2
+{
+  color: #fff;
+}
+.about-section-five .image-column .exp-info{
+	border-color: #fff;
+}
+.pricing-block-four .inner-box .content-column .inner-column .pricing-amount span
+{
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-style-one
+{
+  border-color: #2c2a2a;
+}
+// Text Stroke
+.feature-block .count{
+	-webkit-text-stroke-color: #fff;
+}
+.counter-block-two .count-box{
+	-webkit-text-stroke-color: var(--bg-theme-color2);
+}
+//body color 
+.header-style-two
+{
+  background-color: unset;
+}
+.bg-image-unset,
+.funfact-section .bg.bg-image{
+	background-image: unset !important;
+}
+//bg image
+.banner-section-two .bottom-box:before,
+.contact-section:before {
+  opacity: .1;
+}
+.header-style-two .outer-box .search-btn img{
+	filter: brightness(0) invert(1);
+}
+.news-section-two::before{
+	background-image: url(../images/resource/pattern-4-dark.jpg);
+}
+.contact-form {
+	.form-group {
+		textarea {
+			background-color: #0a090f;
+		}
+		input {
+			&:not([type=submit]) {
+				background-color: #0a090f;
+			}
+		}
+	}
+}
+.newsletter-form-three .form-group input[type=text],
+.newsletter-form-three .form-group input[type=email]{background-color: rgba(22, 36, 62, 0.7);}
+
+.client-block.dark-style img,
+.about-section-seven .content-column .bottom-box .auther-info .image
+{
+  display: inline-block !important;
+  width: auto !important;
+  transition: all 0.3s ease;
+  background: unset;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  opacity: 0.4;
+}

@@ -1,0 +1,71 @@
+:root {
+	//Default colors
+	--theme-color-light: #ffffff;
+	--theme-color-white: #ffffff;
+	--theme-color-white-rgb: 255, 255, 255;
+	--theme-color-dark: #1a3841;
+	--theme-color-gray: #f1f1f2;
+	--theme-color-gray2: #f8f5f2;
+	--theme-color-black: #000000;
+	--theme-color-black-rgb: 0, 0, 0;
+
+	//theme colors
+	--theme-color1: #c6d936;
+	--theme-color1-rgb: 198, 217, 54;
+	--theme-color2: #1a4137;
+	--theme-color2-rgb: 26, 65, 55;
+	--theme-color3: #102930;
+	--theme-color3-rgb: 16, 41, 48;
+	--theme-color4: #163839;
+	--theme-color4-rgb: 22, 56, 57;
+	--theme-color5: #001726;
+	--theme-color5-rgb: 0, 23, 38;
+
+	--bg-theme-color1: var(--theme-color1);
+	--bg-theme-color2: var(--theme-color2);
+
+	//text heading color
+	--text-color: #595b62;
+	--text-color2: #636776;
+	--headings-color: #051b05;
+	--review-color: #ffc737;
+	--link-color: var(--headings-color);
+	--link-hover-color: var(--headings-color);
+
+	//font family
+	--title-font: "DM Sans", sans-serif;
+	--text-font: "Inter", sans-serif;
+
+	//body
+	--body-font-size: 18px;
+	--body-line-height: 36px;
+	--body-font-weight: 400;
+
+	//heading font size + line-height + weight
+
+	--h1-font-size: 90px;
+	--h2-font-size: 48px;
+	--h3-font-size: 32px;
+	--h4-font-size: 24px;
+	--h5-font-size: 18px;
+	--h6-font-size: 14px;
+
+	--line-height-heading-h1: 100px;
+	--line-height-heading-h2: 60px;
+	--line-height-heading-h3: 36px;
+	--line-height-heading-h4: 36px;
+	--line-height-heading-h5: 32px;
+	--line-height-heading-h6: 28px;
+
+	--h1-font-weight: 700;
+	--h2-font-weight: 700;
+	--h3-font-weight: 700;
+	--h4-font-weight: 700;
+	--h5-font-weight: 700;
+	--h6-font-weight: 700;
+
+	//container
+	--container-width: 1344px;
+	--small-container-width: 1000px;
+	--large-container-width: 1760px;
+}

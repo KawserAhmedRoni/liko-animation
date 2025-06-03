@@ -1,0 +1,333 @@
+/*** 
+
+====================================================================
+		FAQ's Section
+====================================================================
+
+***/
+
+.faq-section {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	background-color: var(--theme-color4);
+
+	.sec-title {
+		.text {
+			font-size: 16px;
+			line-height: 28.8px;
+		}
+	}
+
+	.image-column {
+		.inner-column {
+			height: 100%;
+			.image {
+				height: 100%;
+				img {
+					transition: all 500ms ease;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					filter: grayscale(100%);
+				}
+			}
+		}
+	}
+
+	.content-column {
+		.inner-column {
+			padding: 120px 80px;
+			position: relative;
+			z-index: 1;
+			.map-shape {
+				top: 0;
+				right: 0;
+				z-index: -1;
+				position: absolute;
+			}
+
+			@include media-breakpoint-down(xxl) {
+				padding: 60px 30px;
+			}
+			@include media-breakpoint-down(xxl) {
+				padding: 60px 15px;
+			}
+		}
+	}
+
+	&:hover {
+		.image-column {
+			.image {
+				img {
+					filter: grayscale(0);
+				}
+			}
+		}
+	}
+}
+
+.faq-accordion {
+	.accordion {
+		.accordion-item {
+			border: none;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			background-color: #0f2727;
+			overflow: hidden;
+			.accordion-header {
+				button {
+					font-size: 18px;
+					line-height: 30px;
+					font-weight: 700;
+					box-shadow: none;
+					border-radius: 0 !important;
+					padding: 15px 30px;
+					font-family: var(--title-font);
+					color: var(--theme-color-white);
+					transition: all 300ms ease;
+				}
+			}
+			.accordion-body {
+				padding: 30px;
+
+				.text {
+					font-size: 16px;
+					line-height: 30px;
+					margin: 0;
+					color: rgba(var(--theme-color-white-rgb), 0.52);
+				}
+			}
+		}
+
+		.accordion-button {
+			background-color: #00715d;
+			&::after {
+				display: none;
+			}
+			&::before {
+				position: absolute;
+				content: "\f105";
+				font-family: "Font Awesome 6 Pro";
+				font-weight: 700;
+				top: 15px;
+				right: 15px;
+				font-size: 16px;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 0px;
+				color: var(--theme-color-white);
+				text-align: center;
+				transition: all 300ms ease;
+				transform: rotate(90deg);
+			}
+		}
+		.accordion-button.collapsed {
+			background-color: transparent;
+			&::before {
+				transform: rotate(0deg);
+			}
+		}
+	}
+}
+
+/*** 
+
+====================================================================
+		FAQ's Section two
+====================================================================
+
+***/
+
+.faq-section-two {
+	position: relative;
+	z-index: 1;
+	padding-bottom: 150px;
+	margin-top: -20%;
+	
+	@include media-breakpoint-down(xl) {
+		margin-top: 0;
+		padding: 60px 0;
+	}
+
+	.sec-title {
+		max-width: 570px;
+		.text {
+			font-size: 16px;
+			line-height: 30px;
+		}
+	}
+
+	.image-column {
+		.inner-column {
+			position: relative;
+			z-index: 1;
+			.image {
+				border-radius: 40px;
+				overflow: hidden;
+				img {
+					width: 100%;
+					filter: grayscale(100%);
+				}
+			}
+			.info {
+				position: absolute;
+				bottom: -60px;
+				left: -145px;
+			}
+			.shape {
+				position: absolute;
+				top: -60px;
+				left: -60px;
+			}
+			&::after {
+				position: absolute;
+				bottom: 110px;
+				left: -40px;
+				width: 12px;
+				height: 535px;
+				border-radius: 12px;
+				background-color: var(--theme-color1);
+				content: "";
+				z-index: -1;
+			}
+
+			@include media-breakpoint-down(xxl) {
+				.info {
+					left: -70px;
+				}
+			}
+
+			@include media-breakpoint-down(sm) {
+				.info {
+					left: -10px;
+					img {
+						max-width: 200px;
+					}
+				}
+				.shape {
+					display: none;
+				}
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.content-column {
+		.inner-column {
+			margin-left: -110px;
+			margin-bottom: 8px;
+			padding: 70px;
+			background-color: var(--theme-color-white);
+			box-shadow: 0px 4.4px 20px -1px #1310220d;
+			border-radius: 40px;
+			position: relative;
+			z-index: 1;
+			@include media-breakpoint-down(lg) {
+				margin-left: 0;
+			}
+
+			@include media-breakpoint-down(sm) {
+				padding: 30px 12px;
+			}
+		}
+	}
+}
+
+.faq-two-accordion {
+	.accordion {
+		.accordion-item {
+			border: 1px solid #e3e3e3;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			overflow: hidden;
+			.accordion-header {
+				button {
+					font-size: 18px;
+					line-height: 30px;
+					font-weight: 700;
+					box-shadow: none;
+					border-radius: 0 !important;
+					padding: 15px 20px;
+					padding-bottom: 0;
+					font-family: var(--title-font);
+					transition: all 300ms ease;
+					color: var(--headings-color);
+					.number {
+						font-size: 20px;
+						color: var(--headings-color);
+						font-weight: 600;
+						display: inline-block;
+						width: 50px;
+						height: 50px;
+						line-height: 50px;
+						text-align: center;
+						border-radius: 10px;
+						background-color: var(--theme-color1);
+						margin-right: 20px;
+						transition: all 300ms ease;
+
+						@include media-breakpoint-down(sm) {
+							display: none;
+						}
+					}
+				}
+			}
+			.accordion-body {
+				padding: 30px;
+				padding-left: 90px;
+				padding-top: 0;
+				.text {
+					font-size: 16px;
+					line-height: 30px;
+					margin: 0;
+				}
+				@include media-breakpoint-down(sm) {
+					padding-left: 20px;
+					padding-top: 15px;
+					.text {
+						font-size: 14px;
+						line-height: 26px;
+					}
+				}
+			}
+		}
+
+		.accordion-button {
+			background-color: transparent;
+			&::after {
+				display: none;
+			}
+			&::before {
+				position: absolute;
+				content: "\f105";
+				font-family: "Font Awesome 6 Pro";
+				font-weight: 700;
+				top: 15px;
+				right: 15px;
+				font-size: 16px;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 0px;
+				color: var(--headings-color);
+				text-align: center;
+				transition: all 300ms ease;
+				transform: rotate(90deg);
+			}
+		}
+		.accordion-button.collapsed {
+			background-color: transparent;
+			padding-bottom: 15px !important;
+			.number {
+				background-color: rgba(var(--theme-color1-rgb), 0.3) !important;
+			}
+			&::before {
+				transform: rotate(0deg);
+			}
+		}
+	}
+}

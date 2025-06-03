@@ -1,0 +1,75 @@
+// Progress  area start here ***
+.progress {
+	background-color: transparent;
+	position: relative;
+	display: block;
+	height: auto;
+	width: 100%;
+	border-radius: 0;
+	.bar {
+		position: relative;
+		width: 100%;
+		height: 8px;
+		background-color: #e8e8e8;
+		border-radius: 13px;
+		overflow: hidden;
+	}
+	.bar-inner {
+		position: relative;
+		display: block;
+		width: 0px;
+		height: 100%;
+		border-radius: 13px;
+		background-color: #0c6460;
+		-webkit-transition: all 1500ms ease;
+		transition: all 1500ms ease;
+	}
+	.count-text {
+		position: absolute;
+		right: 0px;
+		bottom: 21px;
+		color: var(--theme-color-white);
+		background-color: #0c6460;
+		border-radius: 3px;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		opacity: 0;
+		transition: all 500ms ease;
+		padding: 5px 13px;
+		z-index: 1;
+		&::after {
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			transform: translateX(-50%) rotate(45deg);
+			background-color: #0c6460;
+			width: 14px;
+			height: 14px;
+			content: "";
+			z-index: -1;
+		}
+	}
+	.bar-inner.counted {
+		.count-text {
+			opacity: 1;
+			bottom: 25px;
+			right: -35px;
+		}
+	}
+	.bar.marb-0 {
+		margin-bottom: 0;
+	}
+	.progress-single {
+		position: relative;
+		display: block;
+	}
+	.progress-title {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 36px;
+		color: var(--headings-color);
+		margin-bottom: 10px;
+	}
+}
+// Progress area end here ***

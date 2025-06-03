@@ -1,0 +1,150 @@
+// Strategy area start here ***
+.strategy-section {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	background-color: var(--theme-color-gray);
+
+	.sec-shape {
+		position: absolute;
+		bottom: 0;
+		right: -290px;
+		z-index: -1;
+	}
+
+	.image-column {
+		.inner-column {
+			max-width: 868px;
+			.image {
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+				img {
+					width: 100%;
+				}
+				.info {
+					position: absolute;
+					bottom: 60px;
+					right: 60px;
+				}
+			}
+			@include media-breakpoint-down(xl) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.content-column {
+		.inner-column {
+			max-width: 620px;
+			@include media-breakpoint-down(xl) {
+				padding: 0px 12px;
+				padding-bottom: 30px;
+				max-width: 100%;
+			}
+			.accordion-area {
+				@include media-breakpoint-down(xxxl) {
+					padding-bottom: 60px;
+				}
+				@include media-breakpoint-down(md) {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+// Strategy area start here ***
+
+// Strategy two area start here ***
+.strategy-section-two {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	@include media-breakpoint-down(md) {
+		padding-bottom: 60px;
+	}
+
+	.content-column {
+		.inner-column {
+			max-width: 564px;
+			@include media-breakpoint-down(xl) {
+				max-width: 100%;
+			}
+			.sec-title {
+				max-width: 500px;
+				@include media-breakpoint-down(xl) {
+					max-width: 100%;
+				}
+				.text {
+					font-size: 16px;
+					line-height: 29px;
+					padding-left: 12px;
+					border-left: 2px solid var(--theme-color1);
+				}
+			}
+			.image {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.image-column {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		.inner-column {
+			height: 100%;
+			.image {
+				height: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		@include media-breakpoint-down(xl) {
+			position: unset;
+		}
+	}
+}
+
+.strategy-block-two {
+	position: absolute;
+	bottom: 60px;
+	left: 60px;
+	width: 100%;
+	max-width: 610px;
+	.item {
+		background-color: var(--theme-color1);
+		padding: 40px 30px;
+		border-radius: 10px;
+		.title {
+			color: #0e2d3a;
+			margin-bottom: 15px;
+		}
+		.text {
+			color: #0e2d3a;
+			margin-bottom: 0;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 29px;
+		}
+		&.light {
+			background-color: var(--theme-color2);
+			.title,
+			.text {
+				color: var(--theme-color-white);
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		position: unset;
+		margin-top: 24px;
+	}
+}
+// Strategy two area end here ***

@@ -1,0 +1,298 @@
+/*** 
+
+====================================================================
+    Funfact Sectiom
+====================================================================
+
+***/
+
+.funfact-section {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		content: "";
+		background-color: var(--theme-color-gray2);
+		z-index: -1;
+	}
+
+	.outer-box {
+		padding: 60px 90px;
+		background-color: var(--theme-color1);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		border-radius: 28px;
+		box-shadow: 0px -2px 20px 0px #0000000f;
+
+		@include media-breakpoint-down(lg) {
+			padding: 60px 30px;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
+}
+
+.funfact-block {
+	.inner-box {
+		width: 150px;
+		.icon {
+			margin-bottom: 20px;
+			svg,
+			i {
+				transition: all 300ms ease;
+			}
+		}
+		.content-box {
+			.title {
+				font-size: 48px;
+				line-height: 52px;
+				margin: 0;
+			}
+			.sub-title {
+				color: var(--headings-color);
+				font-weight: 600;
+			}
+		}
+		&:hover {
+			.icon {
+				svg,
+				i {
+					transform: scale(-1) rotate(180deg);
+				}
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			width: 200px;
+		}
+		@include media-breakpoint-down(sm) {
+			width: 150px;
+		}
+	}
+}
+
+/*** 
+
+====================================================================
+    Funfact Sectiom Two
+====================================================================
+
+***/
+
+.funfact-section-two {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	&.have-after {
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 42%;
+			content: "";
+			background-color: var(--theme-color-gray2);
+			z-index: -1;
+		}
+	}
+
+	.sec-title {
+		.list {
+			margin-top: 30px;
+			li {
+				color: #d1d5db;
+				font-weight: 500;
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+				i {
+					color: var(--theme-color1);
+					margin-right: 5px;
+				}
+			}
+			@include media-breakpoint-down(sm) {
+				margin-top: 20px;
+				li {
+					font-size: 14px;
+					&:not(:last-child) {
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	.outer-box {
+		background-color: var(--theme-color2);
+		border-radius: 26px 0 0 26px;
+		overflow: hidden;
+		padding: 60px 80px;
+		margin-right: -30%;
+
+		@include media-breakpoint-down(xxl) {
+			margin-right: -10%;
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-right: 0;
+			border-radius: 25px;
+			padding: 60px 30px;
+		}
+	}
+
+	.block-wrp {
+		max-width: 700px;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		justify-content: space-between;
+		@include media-breakpoint-down(xl) {
+			max-width: 100%;
+		}
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+		}
+	}
+
+	.sec-shape {
+		position: absolute;
+		right: -200px;
+		bottom: -150px;
+	}
+}
+
+.funfact-block-two {
+	.inner-box {
+		width: 150px;
+		transition: background-color 0.3s ease;
+		.icon {
+			margin-bottom: 20px;
+			svg,
+			i {
+				transition: all 300ms ease;
+				margin-left: 10px;
+				path {
+					fill: #fff;
+				}
+			}
+			position: relative;
+			z-index: 1;
+			&::after {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background-color: var(--theme-color1);
+				content: "";
+				left: 0px;
+				bottom: 0;
+				opacity: 0.1;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 20px;
+				border-bottom-right-radius: 30px;
+				border-bottom-left-radius: 40px;
+				z-index: -1;
+			}
+		}
+		.content-box {
+			.title {
+				font-size: 48px;
+				line-height: 52px;
+				margin: 0;
+				color: var(--theme-color-white);
+			}
+			.sub-title {
+				color: var(--theme-color-white);
+				font-weight: 600;
+			}
+		}
+		&:hover {
+			.icon {
+				svg,
+				i {
+					transform: scale(-1) rotate(180deg);
+				}
+			}
+		}
+	}
+	&.active {
+		.inner-box {
+			width: 270px;
+			margin: 0 auto;
+			padding: 55px;
+			border-radius: 19px;
+			background-color: var(--theme-color1);
+			.icon {
+				svg {
+					path {
+						fill: var(--theme-color-black);
+					}
+				}
+			}
+			.content-box {
+				.title {
+					color: var(--headings-color);
+				}
+				.sub-title {
+					color: var(--headings-color);
+				}
+			}
+		}
+	}
+}
+
+/*** 
+
+====================================================================
+    Funfact Sectiom Four
+====================================================================
+
+***/
+
+.funfact-section-four {
+	overflow: hidden;
+
+	@include media-breakpoint-down(xl) {
+		padding-top: 120px;
+		.sec-title {
+			text-align: center;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		padding-top: 60px;
+	}
+}
+
+.funfact-block-four {
+	.title {
+		margin-bottom: 10px;
+		margin-top: 20px;
+	}
+	.sub-title {
+		margin-bottom: 0;
+	}
+	width: fit-content;
+	margin: 0 auto;
+	padding: 60px 0;
+	padding-left: 40px;
+	border-left: 1px solid #d9d9d9;
+
+	@include media-breakpoint-down(lg) {
+		padding: 30px 0;
+		padding-left: 20px;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 0;
+		border: none;
+		text-align: center;
+	}
+}

@@ -1,0 +1,131 @@
+// Accordion area start here ***
+.accordion-area {
+	.accordion {
+		.accordion-item {
+			border: none;
+			border-radius: 7px;
+			.accordion-header {
+				button {
+					font-size: 20px;
+					line-height: 30px;
+					font-weight: 700;
+					box-shadow: none;
+					border-radius: 0 !important;
+					padding: 30px 40px;
+					padding-bottom: 10px;
+					font-family: var(--title-font);
+					color: var(--headings-color);
+					transition: all 300ms ease;
+				}
+			}
+			.accordion-body {
+				padding: 30px 40px;
+				padding-top: 0;
+
+				.text {
+					font-size: 16px;
+					line-height: 30px;
+					margin: 0;
+				}
+			}
+		}
+
+		.accordion-button {
+			background-color: transparent;
+			&::after {
+				display: none;
+			}
+			&::before {
+				position: absolute;
+				content: "\f105";
+				font-family: "Font Awesome 6 Pro";
+				font-weight: 700;
+				top: 30px;
+				right: 30px;
+				font-size: 16px;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 0px;
+				color: var(--headings-color);
+				text-align: center;
+				transition: all 300ms ease;
+                transform: rotate(90deg);
+			}
+		}
+		.accordion-button.collapsed {
+			background-color: var(--theme-color-gray);
+			padding: 25px 40px !important;
+			&::before {
+                transform: rotate(0deg);
+			}
+		}
+	}
+}
+// Accordion area end here ***
+
+.accordion-box {
+	position: relative;
+	.block {
+		position: relative;
+		background-color: #ffffff;
+		box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
+		margin-bottom: 10px;
+		.acc-btn {
+			position: relative;
+			color: var(--headings-color);
+			font-family: var(--title-font);
+			font-weight: var(--h4-font-weight);
+			font-size: 20px;
+			cursor: pointer;
+			padding: 20px 30px;
+			padding-right: 70px;
+			transition: all 500ms ease;
+			border-bottom: 1px solid #fff;
+			.icon {
+				display: flex;
+				align-items: center;
+				position: absolute;
+				right: 30px;
+				top: 50%;
+				height: 35px;
+				font-size: 18px;
+				transform: translateY(-50%);
+				line-height: 2;
+				color: var(--theme-color1);
+				-webkit-transition: all 500ms ease;
+				transition: all 500ms ease;
+			}
+			&.active {
+				background-color: var(--bg-theme-color1);
+				color: #fff;
+				.icon {
+					color: var(--text-color-bg-theme-color2);
+
+					&:before {
+						content: "\f068";
+					}
+				}
+			}
+		}
+		.acc-content {
+			position: relative;
+			display: none;
+			.content {
+				position: relative;
+				padding: 25px 30px;
+				.text {
+					display: block;
+					font-size: 16px;
+					line-height: 30px;
+					color: #808287;
+					margin-bottom: 0;
+				}
+			}
+
+			&.current {
+				display: block;
+			}
+		}
+	}
+}

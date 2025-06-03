@@ -1,0 +1,168 @@
+/*==================================================
+=            Bootstrap 5 Media Queries             =
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
+
+// X-Large devices (large desktops, less than 1400px)
+@include media-breakpoint-down(xxl) {
+}
+
+// Large devices (desktops, less than 1200px)
+@include media-breakpoint-down(xl) {
+}
+
+// Medium devices (tablets, less than 992px)
+@include media-breakpoint-down(lg) {
+	br {
+		display: none;
+	}
+}
+
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(md) {
+	.pt-120 {
+		padding-top: 60px !important;
+	}
+	.pb-120 {
+		padding-bottom: 60px !important;
+	}
+	.mt-120 {
+		margin-top: 60px !important;
+	}
+	.mb-120 {
+		margin-bottom: 60px !important;
+	}
+	.pt-100 {
+		padding-top: 50px !important;
+	}
+	.pb-100 {
+		padding-bottom: 50px !important;
+	}
+	.mt-100 {
+		margin-top: 50px !important;
+	}
+	.mb-100 {
+		margin-bottom: 50px !important;
+	}
+	.pt-80 {
+		padding-top: 40px !important;
+	}
+	.pb-80 {
+		padding-bottom: 40px !important;
+	}
+	.mt-80 {
+		margin-top: 40px !important;
+	}
+	.mb-80 {
+		margin-bottom: 40px !important;
+	}
+	.pt-50 {
+		padding-top: 25px !important;
+	}
+	.pb-50 {
+		padding-bottom: 25px !important;
+	}
+	.pt-60 {
+		padding-top: 30px !important;
+	}
+	.pb-60 {
+		padding-bottom: 30px !important;
+	}
+	.mt-50 {
+		margin-top: 25px !important;
+	}
+	.mb-50 {
+		margin-bottom: 25px !important;
+	}
+	.mt-60 {
+		margin-top: 30px !important;
+	}
+	.mb-60 {
+		margin-bottom: 30px !important;
+	}
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(sm) {
+}
+
+/*==========  minimum and maximum breakpoint Method  ==========*/
+// Extra large devices (large desktops, 1400px and up)
+//@media (min-width: 1400px) { ... }
+@include media-breakpoint-only(xxl) {
+}
+// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) and (max-width: 1399.98px) { ... }
+@include media-breakpoint-only(xl) {
+}
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+@include media-breakpoint-only(lg) {
+	h1 {
+		font-size: 3.3rem;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) and (max-width: 991.98px) { ... }
+@include media-breakpoint-only(md) {
+	h1 {
+		font-size: 3.1rem;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) and (max-width: 767.98px) { ... }
+@include media-breakpoint-down(sm) {
+	h1 {
+		font-size: 3rem;
+	}
+}
+
+// Extra small devices (portrait phones, less than 576px)
+//@media (max-width: 575.98px) { ... }
+@include media-breakpoint-only(xs) {
+}
+
+//Between breakpoints
+//@media (min-width: 768px) and (max-width: 1199.98px) { ... }
+@include media-breakpoint-between(md, xl) {
+}

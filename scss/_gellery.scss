@@ -1,0 +1,99 @@
+// Gellery area start here ***
+.gellery-section {
+	position: relative;
+	z-index: 2;
+
+	&.margin-minus {
+		margin-bottom: -240px;
+	}
+
+	.outer-box {
+		padding: 0 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		@include media-breakpoint-down(lg) {
+			padding: 0 12px;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.gellery-block {
+	.image {
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 300ms ease;
+		}
+	}
+
+	.click-btn {
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: var(--theme-color-white);
+		color: var(--theme-color1);
+		font-size: 30px;
+		position: absolute;
+		top: -5px;
+		border: 1px solid var(--theme-color1);
+		transition: all 300ms ease;
+		&-wrp {
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 120px;
+			height: 120px;
+			line-height: 120px;
+			border-radius: 50%;
+			background-color: var(--theme-color1);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 300ms ease;
+			&:hover {
+				.click-btn {
+					top: 0;
+				}
+			}
+		}
+	}
+
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	border-radius: 6px;
+	width: 25%;
+	height: 528px;
+	transition: all 700ms ease;
+
+	&.active {
+		width: 47%;
+		.click-btn-wrp {
+			top: 50%;
+			visibility: visible;
+			opacity: 1;
+		}
+		.image {
+			img {
+				filter: grayscale(100%);
+			}
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		height: 500px;
+		width: 100% !important;
+	}
+	@include media-breakpoint-down(sm) {
+		height: 400px;
+	}
+}
+// Gellery area end here ***

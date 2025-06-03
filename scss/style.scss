@@ -1,0 +1,115 @@
+/* Hoteler | Hotel Booking HTML Template
+
+Template Name: Hoteler
+Version: 1.0.0
+License: copyright commercial
+
+/************ TABLE OF CONTENTS ***************
+1. Fonts
+2. Reset
+3. Global Settings
+4. Main Header / TwO
+5. Sticky Header
+6. Mobile Menu
+7. Section Title
+8. Main Slider
+9. Banner Section
+10. Project Section
+11. Features Section / TwO / Three / Four / Five
+12. About Section / Two
+13. Services Section / Two
+14. Call To Action / Two
+15. FAQ's Sectiom
+16. Marquee Section
+17. Fun Fact Section
+18. Testimonial Section / Two
+19. team Section
+20, Contact Section / Two
+21. Why Choose Us / Two
+22. News Section / Two
+23. Video Section
+24. Map Section
+25. Clients Section
+26. Main Footer
+**********************************************/
+
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+@import "common/root.scss";
+@import "common/mixing.scss";
+@import "common/loader.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import url("animate.css");
+@import url("swiper.min.css");
+@import url("jquery.fancybox.min.css");
+@import url("nice-select.css");
+@import url("linear.css");
+@import url("fontawesome-free.css");
+@import url("fontawesome.css");
+@import url("flaticon-business.css");
+@import url("tm-bs-mp.css");
+@import url("tm-utility-classes.css");
+
+// import SCSS components one by one
+@import "reset.scss";
+@import "button.scss";
+@import "animation.scss";
+@import "accordion.scss";
+@import "search-popup.scss";
+@import "header.scss";
+@import "mega-menu.scss";
+@import "mobile-menu.scss";
+@import "section-title.scss";
+@import "main-slider.scss";
+@import "banner.scss";
+@import "blog.scss";
+@import "brand.scss";
+@import "about.scss";
+@import "client.scss";
+@import "consult.scss";
+@import "funfact.scss";
+@import "gellery.scss";
+@import "growth.scss";
+@import "marquee.scss";
+@import "case.scss";
+@import "choose.scss";
+@import "contact.scss";
+@import "services.scss";
+@import "step.scss";
+@import "strategy.scss";
+@import "progress.scss";
+@import "projects.scss";
+@import "offer.scss";
+@import "objective.scss";
+@import "testimonials.scss";
+@import "team.scss";
+@import "video.scss";
+@import "room.scss";
+@import "feature.scss";
+@import "call-to-action.scss";
+@import "news.scss";
+@import "nice-select.scss";
+@import "faqs.scss";
+@import "pricing.scss";
+@import "processing.scss";
+@import "food.scss";
+@import "footer.scss";
+
+@import "shop/loader.scss";
+
+//inner
+@import "inner/page-title.scss";
+@import "inner/404.scss";
+@import "inner/contact-page.scss";
+@import "inner/service-details.scss";
+@import "inner/project-details.scss";
+@import "inner/news-details.scss";
+@import "inner/news-sidebar.scss";
+@import "inner/news-comment.scss";
+@import "inner/team-details.scss";
+
+//responsive
+@import "common/responsive.scss";
