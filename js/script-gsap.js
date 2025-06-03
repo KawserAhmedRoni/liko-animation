@@ -23,6 +23,28 @@
 		});
 	}
 
+	// Scroll Zoom Animation
+	if ($(".tp-hero-bottom-img-wrap").length > 0) {
+		let ms = gsap.matchMedia();
+		ms.add("(min-width: 768px)", () => {
+			// Home 8
+			let tp_hero = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".tp-hero-bottom-img-wrap",
+					start: "top 70",
+					pin: true,
+					markers: false,
+					scrub: 1,
+					pinSpacing: false,
+					end: "bottom 50%",
+				},
+			});
+			tp_hero.to(".tp-hero-bottom-img", {
+				width: "100%",
+			});
+		});
+	}
+
 	// Fade Animation
 	if ($(".tp_fade_top").length > 0) {
 		gsap.set(".tp_fade_top", { y: -100, opacity: 0 });
@@ -101,6 +123,7 @@
 	}
 
 	// button hover animation
+
 	// $(".tp-hover-btn").on("mouseenter", function (e) {
 	// 	var x = e.pageX - $(this).offset().left;
 	// 	var y = e.pageY - $(this).offset().top;
