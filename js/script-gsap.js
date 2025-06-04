@@ -45,6 +45,8 @@
 		});
 	}
 
+	// Scroll marqee Animation
+
 	// Fade Animation
 	if ($(".tp_fade_top").length > 0) {
 		gsap.set(".tp_fade_top", { y: -100, opacity: 0 });
@@ -175,5 +177,4 @@
 		});
 	});
 	// button hover end
-    
 })(jQuery);
