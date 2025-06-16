@@ -45,7 +45,78 @@
 		});
 	}
 
-	// Scroll marqee Animation
+	// Scroll marqee Animation start here
+	var controller = new ScrollMagic.Controller();
+
+	var $elheight = window.innerHeight;
+	$(
+		".tp-project-effect, .tp-team-area, .tp-award-2-area, .tp-service-4-area, .showcase-details-2-slider-wrap "
+	).each(function () {
+		var $this = $(this);
+		var $thisHeight = $(this).height();
+
+		var scene = new ScrollMagic.Scene({
+			triggerElement: $this[0],
+			duration: $thisHeight,
+		}).addTo(controller);
+
+		scene.triggerHook(0.9);
+
+		scene.on("enter", function () {
+			$this.addClass("active");
+		});
+
+		if ($("body").hasClass("smooth-scroll")) {
+			scrollbar.addListener(() => {
+				scene.refresh();
+			});
+		}
+	});
+
+	let mv = gsap.matchMedia();
+	mv.add("(min-width: 768px)", () => {
+		// Moving Gallery
+		gsap.utils.toArray(".moving-gallery").forEach((section, index) => {
+			const w = section.querySelector(".wrapper-gallery");
+			const [x, xEnd] =
+				index % 2
+					? [section.offsetWidth - w.scrollWidth, 0]
+					: [0, section.offsetWidth - w.scrollWidth];
+			gsap.fromTo(
+				w,
+				{ x },
+				{
+					x: xEnd,
+					scrollTrigger: {
+						trigger: section,
+						scrub: 0.5,
+					},
+				}
+			);
+		});
+	});
+
+	/* portfolio animation start */
+	if ($(".tp-team-item").length > 0) {
+		gsap.set(".tp-team-item.marque", {
+			x: "25%",
+		});
+
+		gsap
+			.timeline({
+				scrollTrigger: {
+					trigger: ".tp-team-area ",
+					start: "-1000 10%",
+					end: "bottom 20%",
+					scrub: true,
+					invalidateOnRefresh: true,
+				},
+			})
+			.to(".tp-team-item.marque ", {
+				x: "-100%",
+			});
+	}
+	// Scroll marqee Animation end here
 
 	// Fade Animation
 	if ($(".tp_fade_top").length > 0) {

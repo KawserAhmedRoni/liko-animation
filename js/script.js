@@ -470,11 +470,6 @@ var THEMEMASCOT = {};
 		var swiper = new Swiper(".case-slider", {
 			loop: "true",
 			spaceBetween: 35,
-			speed: 1000,
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
 			breakpoints: {
 				767: {
 					slidesPerView: 2,
